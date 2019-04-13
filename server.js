@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require('express-group-routes');
 const app = express();
 
 // Support for encoded bodies
@@ -14,8 +15,12 @@ mongoose.connect('mongodb://admin:rootpass@127.0.0.1:27017/admin', {
 
 // API Routes
 const routes = require('./routes');
-app.get('/api/todos', routes.getAllTodos);
-app.post('/api/todo', routes.createTodo);
+app.group('/api', (router) => {
+    router.get('/todos', routes.getAllTodos);
+    router.post('/todo', routes.createTodo);
+    router.put('/todo', routes.updateTodo);
+    router.delete('/todo', routes.deleteTodo);
+});
 
 app.listen(3000, function () {
     console.log('API on port 3000!');
