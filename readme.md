@@ -82,5 +82,5 @@ API returns JSON encoded message & response code 200
 ```
 
 ### Have fun creating your own Todo list!
-Take care
+Take care!
 > Mvtthew
