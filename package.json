@@ -1,0 +1,17 @@
+{
+  "name": "todos-node-mongo",
+  "version": "1.0.0",
+  "description": "MongoDB + Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "TODO's"
+  ],
+  "author": "Mateusz Ozog",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
