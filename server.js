@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // DB connect
-mongoose.connect('mongodb://admin:rootpass@127.0.0.1:27017/admin', {
+mongoose.connect('mongodb://admin:rootpass@mongo:27017/admin', {
     useNewUrlParser: true
 });
 
